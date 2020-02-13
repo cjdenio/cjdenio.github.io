@@ -1,0 +1,122 @@
+:root{
+    --calebgreen: rgb(17, 227, 140);
+}
+
+*{
+    font-family: "Open Sans", sans-serif;
+}
+
+h1.big{
+    color: var(--calebgreen);
+    font-family: "Oswald";
+    font-size: 80px;
+    font-weight: normal;
+    text-transform: uppercase;
+    cursor: default;
+}
+
+h2.tagline{
+    color: rgb(100, 100, 100);
+    font-family: "Raleway";
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    font-size: 20px;
+}
+
+body, html{
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+.centered{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.page-down{
+    position: absolute;
+    bottom: 60px;
+    color: var(--calebgreen);
+
+    text-align: center;
+
+    animation: page-down 1500ms infinite;
+}
+.page-down i{
+    font-size: 70px;
+}
+.page-down span{
+    display: block;
+    font-size: 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+@keyframes page-down{
+    0%{
+        transform: none;
+    }
+    50%{
+        transform: translateY(8px);
+    }
+    100%{
+        transform: none;
+    }
+}
+
+.social i{
+    border: 5px solid rgb(200, 200, 200);
+    font-size: 40px;
+    padding: 20px;
+    border-radius: 50%;
+    color: rgb(100, 100, 100)
+}
+
+#me-img{
+    width: 200px;
+    border-radius: 40px;
+    margin-bottom: 10px;
+    box-shadow: -10px 10px 0 var(--calebgreen);
+
+    transition-duration: 150ms;
+    transition-property: box-shadow, transform;
+}
+
+#me-img:hover{
+    transform: translate(5px, -5px);
+    box-shadow: -15px 15px 0 var(--calebgreen);
+}
+
+#header{
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(7px);
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+    z-index: 5;
+
+    padding: 20px 40px;
+
+    transition-property: box-shadow, transform;
+    transition-duration: 300ms;
+}
+
+#header .big{
+    font-size: 40px;
+    cursor: pointer;
+    display: inline-block;
+}
+
+#header .big:hover{
+    text-decoration: underline;
+}
+
+#header.hidden{
+    transform: translateY(-100%);
+    box-shadow: none;
+}
