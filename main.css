@@ -23,6 +23,9 @@ h2.tagline{
     text-transform: uppercase;
     font-size: 20px;
 }
+.tagline span::after{
+    content: "\00b7"
+}
 
 body, html{
     height: 100%;
@@ -72,7 +75,8 @@ body, html{
     font-size: 40px;
     padding: 20px;
     border-radius: 50%;
-    color: rgb(100, 100, 100)
+    color: rgb(100, 100, 100);
+    margin: 0 10px;
 }
 
 #me-img{
@@ -107,7 +111,7 @@ body, html{
 }
 
 #header .big{
-    font-size: 40px;
+    font-size: 40px !important;
     cursor: pointer;
     display: inline-block;
     margin-left: 40px;
@@ -118,21 +122,28 @@ body, html{
 }
 
 #header.hidden{
-    transform: translateY(-100%);
-    box-shadow: none;
+    transform: translateY(calc(-100% - 20px));
+    /*box-shadow: none;*/
+}
+
+.subtitle{
+    color: rgb(100, 100, 100);
+    font-family: "Raleway";
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: lowercase;
+    font-size: 20px;
 }
 
 @media (max-width: 500px), (max-height: 700px){
-    .page-down span{
-        display: none;
-    }
-    .myname{
+    .big{
         font-size: 60px !important;
         margin: 15px 0;
     }
     .social i{
         font-size: 25px;
         padding: 10px;
+        border-width: 2px;
     }
     #me-img{
         width: 130px;
@@ -140,9 +151,6 @@ body, html{
     }
     .tagline{
         font-size: 16px !important;
-    }
-    .tagline span{
-        display: block;
     }
 }
 
@@ -160,8 +168,28 @@ body, html{
     }
 }
 
-@media (max-height: 550px){
+@media (max-height: 630px){
     .page-down{
         display: none;
     }
+}
+
+@media (max-width: 650px){
+    .tagline span{
+        display: block;
+        padding: none;
+        margin: none;
+    }
+    .tagline span::after{
+        content: "";
+        background-color: var(--calebgreen);
+        width: 50px;
+        height: 30px;
+        display: inline-block;
+        margin-top: -5px;
+    }
+}
+
+.page{
+    padding-bottom: 20px;
 }
