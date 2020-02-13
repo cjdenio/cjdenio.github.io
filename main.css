@@ -100,7 +100,7 @@ body, html{
     box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
     z-index: 5;
 
-    padding: 20px 40px;
+    padding: 20px 0px;
 
     transition-property: box-shadow, transform;
     transition-duration: 300ms;
@@ -110,6 +110,7 @@ body, html{
     font-size: 40px;
     cursor: pointer;
     display: inline-block;
+    margin-left: 40px;
 }
 
 #header .big:hover{
@@ -119,4 +120,48 @@ body, html{
 #header.hidden{
     transform: translateY(-100%);
     box-shadow: none;
+}
+
+@media (max-width: 500px), (max-height: 700px){
+    .page-down span{
+        display: none;
+    }
+    .myname{
+        font-size: 60px !important;
+        margin: 15px 0;
+    }
+    .social i{
+        font-size: 25px;
+        padding: 10px;
+    }
+    #me-img{
+        width: 130px;
+        border-radius: 30px;
+    }
+    .tagline{
+        font-size: 16px !important;
+    }
+    .tagline span{
+        display: block;
+    }
+}
+
+@media (max-width:500px){
+    #header .big{
+        text-align: center;
+        margin-left: 0;
+        display: block;
+    }
+}
+
+@media (max-height: 800px){
+    .page-down span{
+        display: none;
+    }
+}
+
+@media (max-height: 550px){
+    .page-down{
+        display: none;
+    }
 }
