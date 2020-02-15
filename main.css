@@ -47,6 +47,8 @@ body, html{
     text-align: center;
 
     animation: page-down 1500ms infinite;
+
+    transition: opacity 300ms;
 }
 .page-down i{
     font-size: 70px;
@@ -56,6 +58,10 @@ body, html{
     font-size: 20px;
     text-transform: uppercase;
     font-weight: bold;
+}
+
+.page-down.hidden{
+    opacity: 0;
 }
 
 @keyframes page-down{
@@ -256,6 +262,8 @@ body, html{
 .page{
     position: relative;
     overflow: visible;
+    padding-top: 100px;
+    padding-bottom: 100px;
 }
 
 .page::after{
@@ -319,4 +327,11 @@ body, html{
 
 .project div{
     text-align: left;
+}
+
+.help{
+    text-decoration: underline;
+    color: var(--calebgreen);
+    font-weight: bold;
+    cursor: help;
 }
