@@ -166,6 +166,9 @@ body, html{
     #header{
         padding: 0px 0;
     }
+    #see-more{
+        font-size: 20px !important;
+    }
 }
 
 @media (max-height: 800px){
@@ -304,7 +307,7 @@ body, html{
 .project{
     display: inline-block;
     vertical-align: middle;
-    margin: 0 20px;
+    margin: 20px;
 }
 
 .projects{
@@ -313,9 +316,6 @@ body, html{
     flex-wrap: wrap;
 }
 
-.project p, .project h2{
-    text-align: left;
-}
 
 .project div{
     text-align: left;
