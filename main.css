@@ -81,12 +81,15 @@ body, html{
 
 #me-img{
     width: 200px;
-    border-radius: 40px;
     margin-bottom: 10px;
     box-shadow: -10px 10px 0 var(--calebgreen);
 
+    border: 3px solid var(--calebgreen);
+
     transition-duration: 150ms;
     transition-property: box-shadow, transform;
+
+    padding: 5px;
 }
 
 #me-img:hover{
@@ -147,7 +150,6 @@ body, html{
     }
     #me-img{
         width: 130px;
-        border-radius: 30px;
     }
     .tagline{
         font-size: 16px !important;
@@ -159,6 +161,10 @@ body, html{
         text-align: center;
         margin-left: 0;
         display: block;
+        font-size: 30px !important;
+    }
+    #header{
+        padding: 0px 0;
     }
 }
 
@@ -184,12 +190,113 @@ body, html{
         content: "";
         background-color: var(--calebgreen);
         width: 50px;
-        height: 30px;
+        height: 3px;
         display: inline-block;
-        margin-top: -5px;
+        transform: translateY(-5px);
     }
 }
 
 .page{
     padding-bottom: 20px;
+}
+
+#easter_egg{
+    background-color: white;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    flex-direction: column;
+
+    opacity: 1;
+    visibility: visible;
+
+    transition: all 300ms;
+}
+
+#easter_egg.hidden{
+    opacity: 0;
+    visibility: hidden;
+}
+
+#easter_egg span{
+    font-size: 30px;
+}
+
+.btn.btn-success{
+    background-color: var(--calebgreen);
+    border: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-radius: 0;
+
+    transition-property: box-shadow;
+}
+
+.btn.btn-success:hover, .btn.btn-success:focus, .btn.btn-success:active{
+    background-color: var(--calebgreen) !important;
+}
+
+.btn.btn-success:hover{
+    background-color: rgb(10, 200, 130) !important;
+}
+
+.btn.btn-success:focus{
+    box-shadow: "";
+}
+
+.page{
+    position: relative;
+    overflow: visible;
+}
+
+.page::after{
+    content: "";
+    display: block;
+    height: 3px;
+    width: 100px;
+    background-image: linear-gradient(to right, rgb(0, 150, 200), var(--calebgreen));
+
+    position: absolute;
+    bottom: calc(0px - 3px);
+    left: calc(50% - 50px);
+}
+
+.calebgreen{
+    color: var(--calebgreen);
+}
+
+.project h2{
+    display: inline-block;
+    font-weight: bold;
+    color: rgb(100, 100, 100);
+    font-family: "Raleway", sans-serif;
+}
+
+.project img{
+    width: 150px;
+
+    transition-duration: 150ms;
+    transition-property: box-shadow, transform;
+
+    padding: 10px;
+
+    border: 3px solid var(--calebgreen);
+    box-shadow: -10px 10px 0 var(--calebgreen);
+
+    margin-right: 5px;
+
+    margin-bottom: 30px;
+
+    float: left;
+}
+
+.project img:hover{
+    transform: translate(5px, -5px);
+    box-shadow: -15px 15px 0 var(--calebgreen);
 }
