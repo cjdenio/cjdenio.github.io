@@ -1,110 +1,91 @@
-<!DOCTYPE html>
-<html>
+---
+title: Fun
+layout: default
+---
 
-<head>
-  <link rel="shortcut icon" href="favicon.png">
+<div id="header" class="hidden">
+  <a href="/">
+    <h1 class="big">Caleb Denio</h1>
+  </a>
+</div>
 
-  <meta charset='utf-8'>
-  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-  <title>Caleb Denio</title>
-  <meta name='viewport' content='width=device-width, initial-scale=1'>
-  <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
-  <script src="https://kit.fontawesome.com/921bd8fdbd.js" crossorigin="anonymous"></script>
+<div class="hidden" id="easter_egg">
+  <span>You've found it! 🌞🌈</span>
+  <button class="btn btn-success mt-2" id="easter-egg-back">
+    <i class="fas fa-arrow-left mr-2"></i>Back
+  </button>
+</div>
 
-  <link
-    href="https://fonts.googleapis.com/css?family=Oswald:400,500,600,700|Raleway:300,400,500,600,700,800,900|Open+Sans:400,700&display=swap"
-    rel="stylesheet">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-  <link href="animate.css" rel="stylesheet">
-</head>
-
-<body>
-  <div id="header" class="hidden">
-    <a href="/">
-      <h1 class="big">Caleb Denio</h1>
-    </a>
+<div class="centered page">
+  <div class="text-center">
+    <img src="https://avatars3.githubusercontent.com/u/34525547" id="me-img" />
+    <h1 class="big animated jackInTheBox myname" id="title">Caleb Denio</h1>
+    <h2 class="tagline">Software Developer <span></span> Graphic Designer</h2>
+    <div class="social">
+      <a href="https://github.com/cjdenio" target="_blank"
+        ><i class="fab fa-github animated fadeInUp delay-1s"></i
+      ></a>
+      <a href="https://codepen.io/cjdenio" target="_blank"
+        ><i class="fab fa-codepen animated fadeInUp delay-1s"></i
+      ></a>
+      <a href="https://www.linkedin.com/in/calebdenio" target="_blank"
+        ><i class="fab fa-linkedin animated fadeInUp delay-1s"></i
+      ></a>
+    </div>
   </div>
 
-  <div class="hidden" id="easter_egg">
-    <span>You've found it! 🌞🌈</span>
-    <button class="btn btn-success mt-2" id="easter-egg-back"><i class="fas fa-arrow-left mr-2"></i>Back</button>
-  </div>
+  <span class="page-down">
+    <span>Scroll down</span>
+    <span style="font-size: 15px;">(if you feel so inclined)</span>
+    <i class="fas fa-chevron-down"></i>
+  </span>
+</div>
+<div class="text-center page">
+  <h1 class="big" id="about-title">About Me</h1>
+  <h3 class="subtitle mb-5">Time for introductions</h3>
+  <p>
+    I'm Caleb, a high school student residing in Manchester, NH. I specialize in
+    <span class="help" data-toggle="tooltip" title="Coding"
+      >manipulating bits</span
+    >,
+    <span class="help" data-toggle="tooltip" title="Sound engineering"
+      >moving faders</span
+    >, and
+    <span class="help" data-toggle="tooltip" title="Self-explanatory"
+      >designing UIs</span
+    >.
+  </p>
+</div>
+<div class="text-center page">
+  <h1 class="big" id="projects-title">Projects</h1>
+  <h3 class="subtitle mb-5">Some fun stuff I've worked on</h3>
 
-  <div class="centered page">
-    <div class="text-center">
-      <img src="https://avatars3.githubusercontent.com/u/34525547" id="me-img" />
-      <h1 class="big animated jackInTheBox myname" id="title">Caleb Denio</h1>
-      <h2 class="tagline">Software Developer <span></span> Graphic Designer</h2>
-      <div class="social">
-        <a href="https://github.com/cjdenio" target="_blank"><i
-            class="fab fa-github animated fadeInUp delay-1s"></i></a>
-        <a href="https://codepen.io/cjdenio" target="_blank"><i
-            class="fab fa-codepen animated fadeInUp delay-1s"></i></a>
-        <a href="https://www.linkedin.com/in/calebdenio" target="_blank"><i
-            class="fab fa-linkedin animated fadeInUp delay-1s"></i></a>
+  <div class="projects">
+    <div class="project">
+      <img src="https://frcbot.deniosoftware.com/img/logo.svg" />
+      <div>
+        <h2>FRCBot</h2>
+        <p>FIRST Robotics Competition integration for Slack!</p>
+        <a href="https://frcbot.deniosoftware.com" class="btn btn-success"
+          >View <i class="fas fa-arrow-right ml-2"></i
+        ></a>
       </div>
     </div>
-
-    <span class="page-down">
-      <span>Scroll down</span>
-      <span style="font-size: 15px;">(if you feel so inclined)</span>
-      <i class="fas fa-chevron-down"></i>
-    </span>
-  </div>
-  <div class="text-center page">
-    <h1 class="big" id="about-title">About Me</h1>
-    <h3 class="subtitle mb-5">Time for introductions</h3>
-    <p>I'm Caleb, a high school student residing in Manchester, NH. I specialize in <span class="help"
-        data-toggle="tooltip" title="Coding">manipulating bits</span>, <span class="help" data-toggle="tooltip"
-        title="Sound engineering">moving faders</span>, and <span class="help" data-toggle="tooltip"
-        title="Self-explanatory">designing UIs</span>.</p>
-  </div>
-  <div class="text-center page">
-    <h1 class="big" id="projects-title">Projects</h1>
-    <h3 class="subtitle mb-5">Some fun stuff I've worked on</h3>
-
-    <div class="projects">
-      <div class="project">
-        <img src="https://frcbot.deniosoftware.com/img/logo.svg">
-        <div>
-          <h2>FRCBot</h2>
-          <p>FIRST Robotics Competition integration for Slack!</p>
-          <a href="https://frcbot.deniosoftware.com" class="btn btn-success">View <i
-              class="fas fa-arrow-right ml-2"></i></a>
-        </div>
-      </div>
-      <div class="project">
-        <img src="https://raw.githubusercontent.com/cjdenio/playbox/master/img/icon.png">
-        <div>
-          <h2>Playbox</h2>
-          <p>An audio playback system for the live production industry.</p>
-          <a href="https://github.com/cjdenio/playbox" class="btn btn-success">View <i
-              class="fas fa-arrow-right ml-2"></i></a>
-        </div>
+    <div class="project">
+      <img
+        src="https://raw.githubusercontent.com/cjdenio/playbox/master/img/icon.png"
+      />
+      <div>
+        <h2>Playbox</h2>
+        <p>An audio playback system for the live production industry.</p>
+        <a href="https://github.com/cjdenio/playbox" class="btn btn-success"
+          >View <i class="fas fa-arrow-right ml-2"></i
+        ></a>
       </div>
     </div>
-    <span style="font-size: 25px" id="see-more">See more on my <a href="https://github.com/cjdenio">GitHub page</a> <i
-        class="fas fa-arrow-right ml-2 calebgreen"></i></span>
   </div>
-  <div class="w-100 bg-light p-4 mt-3 text-center">
-    Copyright &copy; <span class="date">2020</span> <b class="calebgreen">Caleb Denio</b>. Please don't steal content,
-    'cause that wouldn't be very nice.
-  </div>
-
-  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
-    crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-    crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
-    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
-    crossorigin="anonymous"></script>
-  <script src="konami.js"></script>
-  <script src='main.js'></script>
-
-
-</body>
-
-</html>
+  <span style="font-size: 25px;" id="see-more"
+    >See more on my <a href="https://github.com/cjdenio">GitHub page</a>
+    <i class="fas fa-arrow-right ml-2 calebgreen"></i
+  ></span>
+</div>
