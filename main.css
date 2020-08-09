@@ -320,8 +320,9 @@ body, html{
 
 .projects{
     display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+    width: 50%;
+    margin: 0 auto;
+    flex-direction: column;
 }
 
 
