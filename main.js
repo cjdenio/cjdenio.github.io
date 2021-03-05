@@ -14,6 +14,8 @@ $(document).scroll(function (e) {
     }
 })
 
+document.getElementById('year').innerHTML = new Date().getFullYear()
+
 var easter_egg = new Konami(function () {
     $('#easter_egg').removeClass("hidden")
 })
